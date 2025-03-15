@@ -13,7 +13,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  Random r = Random();
+  Random randomNum = Random();
   int x = 0;
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class _MyAppState extends State<MyApp> {
           backgroundColor: Colors.green,
         ),
         body: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8.5),
           child:
               x == 4
                   ? Column(
@@ -99,7 +99,7 @@ class _MyAppState extends State<MyApp> {
           backgroundColor: Colors.green,
           shape: CircleBorder(),
           onPressed: () {
-            x = r.nextInt(10);
+            x = randomNum.nextInt(10);
             setState(() {});
           },
           child: Icon(Icons.refresh),
